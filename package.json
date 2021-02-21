@@ -1,0 +1,19 @@
+{
+  "name": "yt-to-podcast",
+  "version": "0.0.1",
+  "description": "Node app to take youtube videos and add the audio track to a podcast xml",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maximumdata/yt-to-podcast.git"
+  },
+  "author": "Mike Dettmer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maximumdata/yt-to-podcast/issues"
+  },
+  "homepage": "https://github.com/maximumdata/yt-to-podcast#readme"
+}
