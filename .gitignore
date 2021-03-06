@@ -1,4 +1,5 @@
 .DS_STORE
+feed.xml
 downloads/*.mp3
 downloads/*.json
 # Logs

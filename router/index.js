@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { writeFile } from 'fs/promises';
+import { writeFile, readFile } from 'fs/promises';
 import ffmpeg from 'fluent-ffmpeg';
 import ytdl from 'ytdl-core';
 import path from 'path';
@@ -65,11 +65,18 @@ router.post('/', async (req, res, next) => {
   }
 });
 
-router.get('/feed.xml', async (req, res, next) => {
+router.get('/build', async (req, res, next) => {
   // ok
   const feed = await buildFeed();
+  const output = path.join(__dirname, '../', `feed.xml`);
+  await writeFile(output, feed, 'utf-8');
+  res.send(output);
+});
+
+router.get('/feed.xml', async (req, res, next) => {
+  const file = await readFile(path.join(__dirname, '../feed.xml'));
   res.set('Content-Type', 'text/xml');
-  res.send(feed);
+  res.send(file);
 });
 
 export default router;
