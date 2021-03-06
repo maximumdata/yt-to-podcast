@@ -74,9 +74,10 @@ router.get('/build', async (req, res, next) => {
 });
 
 router.get('/feed.xml', async (req, res, next) => {
-  const file = await readFile(path.join(__dirname, '../feed.xml'));
+  // const feed = await readFile(path.join(__dirname, '../feed.xml'));
+  const feed = await buildFeed();
   res.set('Content-Type', 'text/xml');
-  res.send(file);
+  res.send(feed);
 });
 
 export default router;

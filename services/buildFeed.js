@@ -9,8 +9,7 @@ function getFeed() {
     description: 'audio from youtube vids',
     feed_url: 'http://ytpodcast.mikedettmer.com/feed.xml',
     site_url: 'http://ytpodcast.mikedettmer.com',
-    image_url:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Emoji_u1f4a9.svg/1200px-Emoji_u1f4a9.svg.png',
+    image_url: 'https://www.pngkit.com/png/detail/661-6619370_emoji-poop.png',
     docs: 'http://ytpodcast.mikedettmer.com',
     author: 'mike',
     managingEditor: 'mike',
@@ -18,7 +17,7 @@ function getFeed() {
     copyright: '2021 mike',
     language: 'en',
     categories: ['Entertainment'],
-    pubDate: 'May 20, 2012 04:00:00 GMT',
+    pubDate: Date.now(),
     ttl: 60,
     itunesAuthor: 'Mike',
     itunesSubtitle: 'I am a sub title',
@@ -35,8 +34,7 @@ function getFeed() {
         ]
       }
     ],
-    itunesImage:
-      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Emoji_u1f4a9.svg/1200px-Emoji_u1f4a9.svg.png'
+    itunesImage: 'https://www.pngkit.com/png/detail/661-6619370_emoji-poop.png'
   });
 }
 
@@ -62,7 +60,11 @@ function addItemToFeed(file, feed) {
     description,
     url: `http://ytpodcast.mikedettmer.com/episode/${id}`,
     date: new Date(added),
-    itunesAuthor: ownerChannelName
+    itunesAuthor: ownerChannelName,
+    enclosure: {
+      url: `http://ytpodcast.mikedettmer.com/episode/${id}`,
+      file: path.join(__dirname, `../downloads/${id}.mp3`)
+    }
   });
 }
 
