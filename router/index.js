@@ -21,7 +21,7 @@ router.get('/episode/:id', (req, res, next) => {
     if (err) {
       next(err);
     } else {
-      console.log('Sent:', fileName);
+      console.log('Sent:', req.params.id);
     }
   });
 });
