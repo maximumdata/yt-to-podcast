@@ -58,7 +58,7 @@ function addItemToFeed(file, feed) {
   feed.addItem({
     title,
     description,
-    url: `https://mikedettmer.com/`,
+    url: `https://www.youtube.com/watch?v=${id}`,
     date: new Date(added),
     itunesAuthor: ownerChannelName,
     itunesTitle: title,
