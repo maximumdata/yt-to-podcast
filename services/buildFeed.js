@@ -7,16 +7,17 @@ function getFeed() {
   return new Podcast({
     title: "mike's youtube stuff",
     description: 'audio from youtube vids',
-    feed_url: 'http://example.com/rss.xml',
-    site_url: 'http://example.com',
-    image_url: 'http://example.com/icon.png',
-    docs: 'http://example.com/rss/docs.html',
+    feed_url: 'http://ytpodcast.mikedettmer.com/feed.xml',
+    site_url: 'http://ytpodcast.mikedettmer.com',
+    image_url:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Emoji_u1f4a9.svg/1200px-Emoji_u1f4a9.svg.png',
+    docs: 'http://ytpodcast.mikedettmer.com',
     author: 'mike',
     managingEditor: 'mike',
     webMaster: 'mike',
     copyright: '2021 mike',
     language: 'en',
-    categories: ['Category 1', 'Category 2', 'Category 3'],
+    categories: ['Entertainment'],
     pubDate: 'May 20, 2012 04:00:00 GMT',
     ttl: 60,
     itunesAuthor: 'Mike',
@@ -34,7 +35,8 @@ function getFeed() {
         ]
       }
     ],
-    itunesImage: 'http://example.com/image.png'
+    itunesImage:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Emoji_u1f4a9.svg/1200px-Emoji_u1f4a9.svg.png'
   });
 }
 
