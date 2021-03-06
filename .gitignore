@@ -1,3 +1,6 @@
+.DS_STORE
+downloads/*.mp3
+downloads/*.json
 # Logs
 logs
 *.log
