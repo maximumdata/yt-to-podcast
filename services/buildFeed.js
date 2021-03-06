@@ -58,7 +58,7 @@ function addItemToFeed(file, feed) {
   feed.addItem({
     title,
     description,
-    url: `https://yt.mikedettmer.com/episode/${id}`,
+    url: `http://ytpodcast.mikedettmer.com/episode/${id}`,
     date: new Date(added),
     itunesAuthor: ownerChannelName
   });
