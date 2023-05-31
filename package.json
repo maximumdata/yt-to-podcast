@@ -4,7 +4,8 @@
   "description": "Node app to take youtube videos and add the audio track to a podcast xml",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ENV=prod babel-node index.js",
+    "dev": "NODE_ENV=dev nodemon --exec babel-node index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,19 @@
   "bugs": {
     "url": "https://github.com/maximumdata/yt-to-podcast/issues"
   },
-  "homepage": "https://github.com/maximumdata/yt-to-podcast#readme"
+  "homepage": "https://github.com/maximumdata/yt-to-podcast#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "fluent-ffmpeg": "^2.1.2",
+    "podcast": "^1.3.0",
+    "ytdl-core": "^4.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/node": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "nodemon": "^2.0.4",
+    "yargs": "^16.2.0"
+  }
 }
